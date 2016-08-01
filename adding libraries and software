@@ -1,0 +1,34 @@
+next I added software and libraries according to the list on: https://www.douban.com/note/568373446/
+
+after dowloading cudnn file from nvidia:
+
+tar -xf cudnn-8.0-linux-x64-v5.0-ga.tgz
+sudo cp -f cuda/lib64/*.* /usr/local/cuda/lib64/
+sudo cp -f cuda/include/*.* /usr/local/cuda/include/
+
+this extracts & copies the relevant files to the desired location
+
+perform deviceQuery to make sure everything went well:
+cd /usr/local/cuda/samples/1_Utilities/deviceQuery
+
+install python-numpy, scipy,dev,pip, nose...
+sudo apt-get install python-numpy python-scipy python-dev python-pip python-nose libopenblas-dev
+
+install theano & keras
+
+sudo pip install Theano
+sudo pip install keras
+echo "[global]" > ~/.theanorc
+echo "floatX = float32" >> ~/.theanorc
+echo "device = gpu0" >> ~/.theanorc
+echo "[nvcc]" >> ~/.theanorc
+echo "fastmath = True" >> ~/.theanorc
+
+sudo apt-get update
+sudo pip install matplotlib
+
+sudo apt-get install libhdf5-dev
+sudo apt-get install cython
+sudo pip install h5py
+
+sudo pip install jupyter
