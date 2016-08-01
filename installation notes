@@ -1,0 +1,21 @@
+I used rufus to install linux 16.04 from usb iso
+After instalation Instalation i followed these instructions to install the relevant nvidia driver:
+http://yangcha.github.io/GTX-1080/ 
+
+sudo add-apt-repository ppa:graphics-drivers/ppa
+sudo apt-get update
+sudo apt-get install nvidia-367
+sudo apt-get install mesa-common-dev
+sudo apt-get install freeglut3-dev
+
+Install CUDA 8.0RC. Download runfile(local). 
+When install CUDA 8, make sure that when asked if you would like to install the old drivers - you refuse
+
+I ran the following two lines and added them to the end of the .bashrc file 
+(which is located in the home directory - if you can't see it press ctrl+H when inside the folder)
+
+export PATH=/usr/local/cuda-8.0/bin${PATH:+:${PATH}}
+export LD_LIBRARY_PATH=/usr/local/cuda-8.0/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
+
+once gpu+cuda+path were taken care of we can now check the installation is correct by:
+nvidia-smi
