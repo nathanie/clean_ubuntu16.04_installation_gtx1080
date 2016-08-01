@@ -13,6 +13,9 @@ When install CUDA 8, make sure that when asked if you would like to install the 
 
 I ran the following two lines and added them to the end of the .bashrc file 
 (which is located in the home directory - if you can't see it press ctrl+H when inside the folder)
+an alternative to manual editing of the file could be:
+echo "export CUDA_HOME=/usr/local/cuda" >> ~/.bashrc
+echo "export PATH=/usr/local/cuda/bin:$PATH" >> ~/.bashrc
 
 export PATH=/usr/local/cuda-8.0/bin${PATH:+:${PATH}}
 export LD_LIBRARY_PATH=/usr/local/cuda-8.0/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
