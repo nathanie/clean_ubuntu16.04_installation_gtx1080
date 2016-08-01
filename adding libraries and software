@@ -12,9 +12,9 @@ perform deviceQuery to make sure everything went well:
 cd /usr/local/cuda/samples/1_Utilities/deviceQuery
 
 install python-numpy, scipy,dev,pip, nose...
-sudo apt-get install python-numpy python-scipy python-dev python-pip python-nose libopenblas-dev
+sudo apt-get install python-numpy python-scipy python-dev python-pip python-nose libopenblas-dev pandas
 
-install theano & keras
+#install theano & keras
 
 sudo pip install Theano
 sudo pip install keras
@@ -32,3 +32,10 @@ sudo apt-get install cython
 sudo pip install h5py
 
 sudo pip install jupyter
+
+#install opencv
+sudo apt-get update
+sudo apt-get upgrade
+
+
+
