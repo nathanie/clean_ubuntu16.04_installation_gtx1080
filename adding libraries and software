@@ -46,12 +46,12 @@ wget https://bootstrap.pypa.io/get-pip.py
 sudo python get-pip.py
 
 # the following part is not mandatory but is recommended:
-sudo pip install virtualenv virtualenvwrapper
-sudo rm -rf ~/.cache/pip
-export WORKON_HOME=$HOME/.virtualenvs
-source /usr/local/bin/virtualenvwrapper.sh
-source ~/.bashrc
-mkvirtualenv cv
+	sudo pip install virtualenv virtualenvwrapper
+	sudo rm -rf ~/.cache/pip
+	export WORKON_HOME=$HOME/.virtualenvs
+	source /usr/local/bin/virtualenvwrapper.sh
+	source ~/.bashrc
+	mkvirtualenv cv
 
 #going back to the installation process:
 sudo apt-get install python2.7-dev
@@ -78,8 +78,15 @@ make -j4
 sudo make install
 sudo ldconfig
 
+#if installed through the virtual environment 
+	cd ~/.virtualenvs/cv/lib/python2.7/site-packages/
+	ln -s /usr/local/lib/python2.7/site-packages/cv2.so cv2.so
+	workon cv
 
+#verify the installation:
+python
+import cv2
+cv2.__version__
 
-
-
+# should get '3.1.0'
 
