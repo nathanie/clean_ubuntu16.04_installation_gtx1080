@@ -73,7 +73,19 @@ cmake -D CMAKE_BUILD_TYPE=RELEASE \
 	-D INSTALL_PYTHON_EXAMPLES=ON \
 	-D OPENCV_EXTRA_MODULES_PATH=~/opencv_contrib/modules \
 	-D BUILD_EXAMPLES=ON ..
-	
+
+# as to the time of writing this set of commands there are still some bugs within the files 
+#so the following fixes should be made:
+in the file modules/cudalegacy/src/graphcuts.cpp - change line 45 from:
+#if !defined (HAVE_CUDA) || defined (CUDA_DISABLER)
+to:
+#if !defined (HAVE_CUDA) || defined (CUDA_DISABLER) || (CUDART_VERSION >= 8000)
+
+in the file /opencv_contrib-3.1.0/modules/hdf/include/opencv2/hdf/hdf5.hpp - change line 40 from:
+#include <hdf5.h>
+to:
+#include "/usr/include/hdf5/serial/hdf5.h"
+
 make -j4
 sudo make install
 sudo ldconfig
