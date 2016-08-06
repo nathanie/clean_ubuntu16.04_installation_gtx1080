@@ -12,6 +12,8 @@ this extracts & copies the relevant files to the desired location
 
 perform deviceQuery to make sure everything went well:
 cd /usr/local/cuda/samples/1_Utilities/deviceQuery
+sudo make
+./deviceQuery
 
 install python-numpy, scipy,dev,pip, nose...
 sudo apt-get install python-numpy python-scipy python-dev python-pip python-nose libopenblas-dev pandas
