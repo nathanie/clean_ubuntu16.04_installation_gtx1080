@@ -16,7 +16,7 @@ sudo make
 ./deviceQuery
 
 install python-numpy, scipy,dev,pip, nose...
-sudo apt-get install python-numpy python-scipy python-dev python-pip python-nose libopenblas-dev pandas
+sudo apt-get install python-numpy python-scipy python-dev python-pip python-nose libopenblas-dev python-pandas
 
 #install theano & keras
 
