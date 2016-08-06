@@ -4,6 +4,21 @@ dowload cudnn file from nvidia
 https://developer.nvidia.com/rdp/cudnn-download
 after dowloading cudnn file from nvidia:
 
+sudo apt-get install build-essential wget
+
+sudo apt-get install gcc-4.8 gcc-4.8-multilib g++-4.8 g++-4.8-multilib
+sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-5 60
+sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-4.8 50
+sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-5 60
+sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-4.8 50
+
+sudo update-alternatives --config gcc
+sudo update-alternatives --config g++
+
+# sudo update-alternatives --remove gcc /usr/bin/gcc-4.8
+# sudo update-alternatives --remove g++ /usr/bin/g++-4.8
+
+
 tar -xf cudnn-8.0-linux-x64-v5.0-ga.tgz
 sudo cp -f cuda/lib64/*.* /usr/local/cuda/lib64/
 sudo cp -f cuda/include/*.* /usr/local/cuda/include/
