@@ -30,10 +30,15 @@ echo "fastmath = True" >> ~/.theanorc
 
 sudo apt-get update
 sudo pip install matplotlib
+sudo pip install bokeh
+sudo pip install seaborn
+sudo pip install lasagne
+
 
 sudo apt-get install libhdf5-dev
 sudo apt-get install cython
 sudo pip install h5py
+sudo pip install nolearn
 
 sudo pip install jupyter
 
