@@ -1,5 +1,7 @@
 next I added software and libraries according to the list on: https://www.douban.com/note/568373446/
 
+dowload cudnn file from nvidia
+https://developer.nvidia.com/rdp/cudnn-download
 after dowloading cudnn file from nvidia:
 
 tar -xf cudnn-8.0-linux-x64-v5.0-ga.tgz
