@@ -8,7 +8,7 @@ sudo apt-get install nvidia-367
 sudo apt-get install mesa-common-dev
 sudo apt-get install freeglut3-dev
 
-Install CUDA 8.0RC. Download runfile(local). 
+Install CUDA 8.0RC. Download runfile(local). from https://developer.nvidia.com/cuda-release-candidate-download
 When install CUDA 8, make sure that when asked if you would like to install the old drivers - you refuse
 
 I ran the following two lines and added them to the end of the .bashrc file 
