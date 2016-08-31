@@ -126,3 +126,5 @@ cv2.__version__
 
 # should get '3.1.0'
 
+# install xgboost
+sudo pip install xgboost
