@@ -8,4 +8,7 @@ sudo apt-get install r-base r-base-dev
 sudo apt-get install gdebi-core
 wget https://download1.rstudio.org/rstudio-0.99.903-amd64.deb
 sudo gdebi -n rstudio-0.99.903-amd64.deb
+
+
+#in case you wish to remove the installation use:
 #rm rstudio-0.99.903-amd64.deb
