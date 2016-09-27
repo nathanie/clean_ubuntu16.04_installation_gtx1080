@@ -11,8 +11,9 @@ sudo apt-get install freeglut3-dev
 restart your system to allow changes to take effect
 
 Install CUDA 8.0RC. Download runfile(local). from https://developer.nvidia.com/cuda-release-candidate-download
-by - sudo sh ~/Downloads/cuda_8.0.27_linux.run --override -silent -driver
+by - sudo sh ~/Downloads/cuda_8.0.27_linux.run --override 
 When install CUDA 8, make sure that when asked if you would like to install the old drivers - you refuse
+you will get a message that installation is not complete since you did not install the old driver - that's fine!
 
 I ran the following two lines and added them to the end of the .bashrc file 
 (which is located in the home directory - if you can't see it press ctrl+H when inside the folder)
@@ -20,8 +21,8 @@ an alternative to manual editing of the file could be:
 echo "export CUDA_HOME=/usr/local/cuda" >> ~/.bashrc
 echo "export PATH=/usr/local/cuda/bin:$PATH" >> ~/.bashrc
 
-export PATH=/usr/local/cuda-8.0/bin${PATH:+:${PATH}}
-export LD_LIBRARY_PATH=/usr/local/cuda-8.0/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
+echo "export PATH=/usr/local/cuda-8.0/bin${PATH:+:${PATH}}" >> ~/.bashrc
+echo "export LD_LIBRARY_PATH=/usr/local/cuda-8.0/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}" >> ~/.bashrc
 
 restart your system
 
