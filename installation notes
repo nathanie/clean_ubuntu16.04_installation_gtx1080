@@ -1,4 +1,8 @@
 I used rufus to install linux 16.04 from usb iso
+
+i found the following to be extremely useful since nvidia drivers tend to create errors especially after kernel updates:
+echo $(dpkg -l "*$(uname -r)*" | grep image | awk '{print $2}') hold | dpkg --set-selections
+
 After instalation Instalation i followed these instructions to install the relevant nvidia driver:
 http://yangcha.github.io/GTX-1080/ 
 
@@ -114,8 +118,6 @@ sudo apt-get install libatlas-base-dev gfortran
 	mkvirtualenv cv
 
 #going back to the installation process:
-sudo apt-get install python2.7-dev
-pip install numpy
 cd ~
 git clone https://github.com/Itseez/opencv.git
 cd opencv
