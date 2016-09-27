@@ -10,13 +10,15 @@ sudo apt-get install freeglut3-dev
 
 restart your system to allow changes to take effect
 
-Install CUDA 8.0RC. Download runfile(local). from https://developer.nvidia.com/cuda-release-candidate-download then run:
+Install CUDA 8.0RC. Download runfile(local). from https://developer.nvidia.com/cuda-release-candidate-download then:
 
+hit ctrl+alt+f3 to enter tty3 
 sudo sh ~/Downloads/cuda_8.0.27_linux.run --override 
-sudo sh ~/Downloads/cuda_8.0.27.1_linux.run
 
 When install CUDA 8, make sure that when asked if you would like to install the old drivers - you refuse
 you will get a message that installation is not complete since you did not install the old driver - that's fine!
+
+sudo sh ~/Downloads/cuda_8.0.27.1_linux.run
 
 I ran the following two lines and added them to the end of the .bashrc file 
 (which is located in the home directory - if you can't see it press ctrl+H when inside the folder)
@@ -35,7 +37,7 @@ nvidia-smi
 next I added software and libraries according to the list on: https://www.douban.com/note/568373446/
 
 dowload cudnn file from nvidia
-https://developer.nvidia.com/rdp/cudnn-download
+https://developer.nvidia.com/rdp/cudnn-download #I used v5.1 linux
 after dowloading cudnn file from nvidia:
 
 sudo apt-get install build-essential wget
