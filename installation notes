@@ -166,3 +166,7 @@ cv2.__version__
 
 # install xgboost
 sudo pip install xgboost
+
+sudo add-apt-repository ppa:mystic-mirage/pycharm
+sudo apt update
+sudo apt install pycharm-community
