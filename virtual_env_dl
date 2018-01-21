@@ -1,0 +1,7 @@
+virtualenv -p python3 dl-expr
+source dl-expr/bin/activate
+pip install numpy scipy matplotlib scikit-image scikit-learn ipython protobuf jupyter pandas
+pip install tensorflow-gpu
+pip install keras
+pip install http://download.pytorch.org/whl/cu80/torch-0.2.0.post3-cp35-cp35m-manylinux1_x86_64.whl
+pip install torchvision
